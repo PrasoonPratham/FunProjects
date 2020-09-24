@@ -38,7 +38,7 @@ line = "****************************************"
 
 #Game Logic
 while player == False:
-    player = input("Rock, Paper, Scissors? (r/p/s)")
+    player = input("Rock, Paper, Scissors? (r/p/s/x for exit)")
     if player == computer:
         print("Tie!")
     elif player == "r":
@@ -74,6 +74,10 @@ while player == False:
             print("You win!" + scissors) 
             print("cut" + paper)
             print(line)
+    elif player == "x":    
+        # Add a termination condition
+        print("Consider playing this game again")
+        break
     else:
         print("That's not a valid play. Check your spelling!")
     #player was set to True, but we want it to be False so the loop continues
